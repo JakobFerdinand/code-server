@@ -2,4 +2,4 @@
 
 Additional things that had to be done:
 https://docs.linuxserver.io/faq#libseccomp
-
+Option 2 worked for me.
