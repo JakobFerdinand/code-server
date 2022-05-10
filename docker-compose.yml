@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:arm32v7-latest
+    container_name: mad-code-server
+    #restart: always
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=Europe/Vienna
+      #- PASSWORD=password #optional
+      #- HASHED_PASSWORD= #optional
+      #- SUDO_PASSWORD=password #optional
+      #- SUDO_PASSWORD_HASH= #optional
+      #- PROXY_DOMAIN=code-server.my.domain #optional
+      - DEFAULT_WORKSPACE=/config/workspace #optional
+    volumes:
+      - ~/vscode/config:/config
+    ports:
+      - 8443:8443
